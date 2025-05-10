@@ -10,7 +10,7 @@ def load_words(csv_filename):
     df = pd.read_csv(csv_filename)
     return df["Word"].tolist()
 
-st.title("Warren & Logan's D-Word Duel")
+st.title("Warren & Logan's D&D Battle Cry!")
 
 # Dropdown to select from one of the five preloaded CSVs
 csv_files = {
@@ -26,7 +26,7 @@ csv_path = os.path.join(os.path.dirname(__file__), csv_files[selected_file])
 
 words = load_words(csv_path)
 
-if st.button("Generate Battle Cry!"):
+if st.button("Generate Battle Cry! D&D!"):
     if len(words) >= 2:
         warren_word, logan_word = random.sample(words, 2)
         st.subheader("**Warren shouts:**")
