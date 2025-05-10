@@ -5,8 +5,8 @@ import random
 
 # Load CSV file
 @st.cache_data
-def load_words(csv_file):
-    df = pd.read_csv(csv_file)
+def load_words(WLDWord.csv):
+    df = pd.read_csv(WLDWord.csv)
     return df["Word"].tolist()
 
 st.title("Warren & Logan's D&D Bash Bros Battlecry")
